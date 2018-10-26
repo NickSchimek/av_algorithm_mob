@@ -1,22 +1,18 @@
-function bubbleSort(array) {
-	let sorted = false;
-	const lengthOfTheArray = array.length;
-	
-	while (!sorted) {
-		sorted = true;
-		for (let i = 0; i < lengthOfTheArray; i++) {
-			if (array[i] > array[i + 1]) {
-				let temp = array[i + 1]
-				array[i + 1] = array[i]
-				array[i] = temp
-				sorted = false;
-			}
-
-		}
-
-	}
-	return array
+function bubbleSort(arr) {
+  let sorted = false;
+  let len = arr.length - 1;
+  while (!sorted) {
+    sorted = true;
+    
+    for (let i = 0; i < len; i++) {
+      if (arr[i] > arr[i + 1]) {
+        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+        sorted = false;
+      }
+    }
+    len--;
+  }
+  return arr;
 }
 
-console.log(bubbleSort([3, 5, 1, 7, 0]))
-//console.log(bubbleSort([1, 2, 3, 4, 5, 6, 7]))
+console.log(bubbleSort([9, 5, 1, 4, 0]))
