@@ -1,3 +1,8 @@
+This repo has been moved to:  
+
+https://github.com/AgileVentures/av_algorithm_mob
+
+
 # av_algorithm_mob
 Investigating Data structures and Algorithms with the AgileVentures community.
 
